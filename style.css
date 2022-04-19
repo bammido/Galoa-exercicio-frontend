@@ -5,8 +5,9 @@ estrará em todas as páginas
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    line-height: 16px;
 }
 
 body{
@@ -14,6 +15,23 @@ body{
     min-height: 100vh;
     width: 100%;
     display: flex;
+}
+
+#arquivo{
+    overflow: scroll;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    flex-grow: 1;
+    padding: 0 40px;
+}
+
+main>section{
+    margin-bottom: 30px;
 }
 
 /* header */
@@ -27,14 +45,12 @@ header{
     height: 4em;
 }
 
-
-#arquivo{
-    overflow: scroll;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+header h1{
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
 }
+
 
 #idioma-login{
     display: flex;
@@ -102,11 +118,21 @@ header{
 }
 
 .menu-item{
-    font-weight: bold;
+    height: 19px;
+
+    /* fonte */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+
+    /* espaçamento */
     padding-left: 15px;
-    padding-bottom: 5px;   
-    border-bottom: 1px solid rgb(0,0,0,0.2);
+    padding-bottom: 5px;  
     margin-bottom: 5px;
+    
+    
+    border-bottom: 1px solid rgb(0,0,0,0.2);
 }
 
 #nome-evento{
@@ -115,7 +141,7 @@ header{
     align-items: center;
     color: white;
     
-    /* cor de fundo com gradiente até 30% de opacidade */
+    /* cor de fundo com gradiente */
     background-image: linear-gradient(to top, rgb(239,127,60), rgb(254,175,82));
     
     padding: 5px;
@@ -155,6 +181,7 @@ footer img{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 2em;
 }
 
 /* linhas dos lados "anais e proceedings" */
