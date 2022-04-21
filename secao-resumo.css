@@ -1,0 +1,65 @@
+/* resumo */
+#resumo{
+    width: 100%;
+
+    border: 1px solid #ECECEC;
+}
+
+#resumo-check{
+    display: none;
+}
+
+#painel-resumo{
+    width: 100%;
+    background-color: rgb(247,151,71, 0.2);
+}
+
+#painel-resumo h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: #4E4E4E;
+    padding: 5px 0;
+}
+
+#campo-de-resumo p{
+    font-family: 'Quicksand', sans-serif;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+
+#campo-de-resumo{
+    position: relative;
+    height: 8em;
+    overflow: hidden;
+    padding: 15px;
+}
+
+/* ver mais/ ver menos */
+#ver-mais , #ver-menos{
+    position: absolute;
+    bottom: 3px;
+    right: 15px;
+    color: rgb(247,151,71);
+}
+
+
+#ver-menos{
+    display: none;
+}
+
+/* expandir/contrair resumo*/
+
+#resumo-check:checked + #campo-de-resumo{
+    overflow: visible;
+    height: auto;
+}
+
+#resumo-check:checked + #campo-de-resumo>#ver-menos{
+    display: inline;
+}
+
+#resumo-check:checked + #campo-de-resumo>#ver-mais{
+    display: none;
+}
+
