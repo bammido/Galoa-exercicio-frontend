@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="discussao.css">
+    <link rel="stylesheet" href="secao-video.css">
+    <link rel="stylesheet" href="secao-resumo.css">
+
    
     <!-- fonte geral-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Questrial&family=Quicksand:wght@300&family=Roboto&family=Roboto+Condensed:wght@300&family=Roboto+Slab:wght@100;300&display=swap" rel="stylesheet">
     
     <!-- fonte side bar -->
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Questrial&family=Quicksand&family=Roboto&family=Roboto+Condensed:wght@300&family=Roboto+Slab:wght@100;300&d
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Questrial&family=Quicksand&family=Roboto&family=Roboto+Condensed:wght@300&family=Roboto+Slab:wght@100;300&d">
 
     <!-- galoá fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +32,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
 
-    <!--awersome icons  -->
+    <!--awesome icons  -->
     <script src="https://kit.fontawesome.com/234449dc71.js" crossorigin="anonymous" defer></script>
     
     <title>Document</title>
@@ -64,9 +69,9 @@
                 <label for="comites">Comitês</label>
             </div>
 
-            <input type="radio" id="apresentacao" class="check" name="menu-item">
+            <input type="radio" id="apresentacao-nav" class="check" name="menu-item">
             <div class="menu-item">
-                <label for="apresentacao">Apresentação</label>
+                <label for="apresentacao-nav">Apresentação</label>
             </div>
 
             <img src="./imagens/slaca.png" alt="">
@@ -81,7 +86,7 @@
     <div id="arquivo">
 
         <header>
-            <div>
+            <div id="titulo-header">
     
                 <p>Anais do Simpósio Latino Americano de Ciências de Alimentos </p>
         
@@ -254,8 +259,10 @@
                     <h3>Discussões</h3>
                 </div>
                 
-                
-                <input type="checkbox" name="compartilhe-check" id="compartilhe-check">
+                <input type="radio" name="compartilhe-check" id="topico-check">
+                <input type="radio" name="compartilhe-check" id="check-inicial" checked>
+                <input type="radio" name="compartilhe-check" id="compartilhe-check">
+              
                 <div id="mande-sua-pergunta">
                     <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
                     
@@ -273,7 +280,7 @@
                             </div>
                             
                             <div id="enviar-botao">
-                                <label for="compartilhe-check">
+                                <label for="topico-check">
                                     Enviar
                                 </label>
                             </div>
@@ -302,6 +309,58 @@
                             </div>
                         </label> 
                     </div> 
+                </div>
+               
+                <div id="topico-criado">
+
+                    <h4 id="titulo-novo-topico">Seu tópico foi enviado com sucesso! :D</h4>
+                    <p class="texto-topico-criado">Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+                    <p id="texto-topico-criado" class="texto-topico-criado">Descubra outros trabalhos!</p>
+
+                    <div id="novo-topico-botao">
+                        <label for="compartilhe-check">criar novo tópico</label>
+                    </div>
+
+                    <div id="chat-card-novo-topico">
+                        <div class="chat-card">
+                            <div class="card-header">
+                                <h4>Assunto da pergunta aparece aqui</h4>
+                                <p>Carlos Henrique Santos</p>
+                            </div>
+    
+                            <div class="card-body">
+                                <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+                            </div>
+                            
+    
+                            <div class="card-footer">
+    
+                                <div class="ontos-verticais"><a href="https://www.freepik.com" title="Freepik"> 
+                                    <img src="./imagens/pontos-verticais.png" alt="">
+                                    </a>
+                                </div>
+    
+                                <div class="favorite">
+                                    <span class="material-icons-outlined">
+                                        favorite
+                                    </span>
+                                </div>
+    
+                                <p>1 like</p> 
+                                <p>1 resposta</p>
+                            </div>
+                            
+                        </div>
+
+                        <div id="overlay-card-novo-topico">
+                            <i class="fa-solid fa-check-double"></i>
+                            <p>Aguardando feedback dos autores</p>
+                            <label for="">Editar tópico</label>
+                        </div>
+
+                    </div>
+
+
                 </div>
 
                 <div id="chat">
@@ -351,11 +410,13 @@
                         
 
                         <div class="card-footer">
-
-                            <div class="ontos-verticais"><a href="https://www.freepik.com" title="Freepik"> 
-                                <img src="./imagens/pontos-verticais.png" alt="">
-                                </a>
-                            </div>
+                            <label for="mais-info">
+                                <div class="ontos-verticais">
+                                    <!-- <a href="https://www.freepik.com" title="Freepik">  -->
+                                    <img src="./imagens/pontos-verticais.png" alt="">
+                                    <!-- </a> -->
+                                </div>
+                            </label>
 
                             <div class="favorite">
                                 <span class="material-icons-outlined">
@@ -364,14 +425,91 @@
                             </div>
 
                             <p>1 like</p> 
-                            <p>1 resposta</p
+                            <p>1 resposta</p>
                         </div>
+
                         
                     </div>
-                   
-                   
-                   
+
+                    <input type="checkbox" name="mais-info" id="mais-info">
+
+                    <div id="mais-info-box">
+
+                        
+                        <div class="mais-info-card">
+
+                            <div class="mais-info-card-header">
+                                <h4>Adriano da Silva</h4>
+                                <div>
+                                    <h4 class="autor">Autor</h4>
+                                    <i class="fa-solid fa-check-double"></i>
+                                </div>
+                            </div>
+
+                            <div class="mais-info-card-body">
+                                <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="mais-info-card">
+
+                            <div class="mais-info-card-header">
+                                <h4>Carlos Henrique Santos</h4>
+                                <div>
+                                    <!-- <h4 class="autor">Autor</h4> -->
+                                    <!-- <i class="fa-solid fa-check-double"></i> -->
+                                </div>
+                            </div>
+
+                            <div class="mais-info-card-body">
+                                <p>Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.</p>
+
+                                <p>Obrigada pela resposta, muito interessante o seu trabalho! </p>
+                            </div>
+
+                        </div>
+
+                        <div class="mais-info-card">
+
+                            <div class="mais-info-card-header">
+                                <h4>Carmila Ferreira Andrade</h4>
+                                <div>
+                                    <h4 class="autor">Coautor</h4>
+                                    <i class="fa-solid fa-check-double"></i>
+                                </div>
+                            </div>
+
+                            <div class="mais-info-card-body">
+                                <p>Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+
+                                <p> Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="mais-info-card">
+
+                            <div class="mais-info-card-header">
+                                <h4>Ana Carolina</h4>
+                                <div>
+                                    <h4 class="autor">Coautor</h4>
+                                    <i class="fa-solid fa-check-double"></i>
+                                </div>
+                            </div>
+
+                            <div class="mais-info-card-body">
+                                <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                            </div>
+
+                        </div>
+
+                        <label for="mais-info" id="ver-menos-mais-info">
+                            ver menos
+                        </label>
+
                     </div>
+                   
                 
                 </div>
 
