@@ -1,10 +1,217 @@
+/* estilização base,
+estrará em todas as páginas
+*/
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 body{
     height: 100%;
     min-height: 100vh;
     width: 100%;
+    display: flex;
 }
+
+#arquivo{
+    overflow: scroll;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    flex-grow: 1;
+    padding: 0 40px;
+}
+
+main>section{
+    margin-bottom: 30px;
+}
+
+/* header */
+
+header{
+    background-color: rgb(247,151,71, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px;
+    max-height: 4em;
+    height: 4em;
+}
+
+header h1{
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+
+#idioma-login{
+    display: flex;
+    align-items: center;
+}
+
+#idiomas{
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 0.4em;
+}
+
+#login{
+    margin-left: 20px;
+    text-align: end;
+    display: flex;
+    align-items: center;
+}
+
+#login img{
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#foto-perfil{
+    position: relative;
+}
+
+#notificacoes{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.65em;
+    padding: 0 0.4em;
+}
+
+/* slide menu */
+
+#slide-menu{
+    left: 0;
+    min-height: 100vh;
+    height: 100%;
+    width: 220px;
+    box-shadow: 0.15em 0  0.8em rgb(0,0,0,0.2);
+}
+
+#slide-bar{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.check{
+    display: none;
+}
+
+.check:checked + .menu-item{
+    border-left: 4px solid rgb(247,151,71);
+    background-color: rgb(247,151,71, 0.2);
+}
+
+.menu-item{
+    height: 19px;
+
+    /* fonte */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+
+    /* espaçamento */
+    padding-left: 15px;
+    padding-bottom: 5px;  
+    margin-bottom: 5px;
+    
+    
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+}
+
+#nome-evento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    /* cor de fundo com gradiente */
+    background-image: linear-gradient(to top, rgb(239,127,60), rgb(254,175,82));
+    
+    padding: 5px;
+    height: 4em;
+}
+
+#nome-evento span{
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    font-weight: 500;
+    padding: 40px 40px;
+}
+
+footer img{
+    width: 100%;
+}
+
+#objetivo-gaola p{
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 15px;   
+}
+
+#logo-galoa{
+    color: #341947;
+    margin-right: 25px;
+    text-align: center;
+}
+
+/* container quee engloba "anais e proceedings" */
+#sub-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+/* linhas dos lados "anais e proceedings" */
+#sub-titulo>div{
+    width: 1.5em;
+    height: 0.15em;
+    background-color: #341947;
+}
+
+#logo-galoa button{
+    background-color: #71478E;
+    color: white;
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 3px;
+}
+
+/* "anais e proceedings" */
+#logo-galoa span{
+    font-family: 'Questrial', sans-serif;
+}
+
+/* galoá logo */
+#galoa{
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold;
+    font-size: 5em;
+    margin-bottom: -10px;
+}
+
+/* cor gaolá #341947 */
+
+/* cor botão #71478E */
